@@ -1,0 +1,13 @@
+// main.scss
+@use "./_variables" as vars;
+
+body {
+  font-family: vars.$font-family;
+  margin: 0;
+  background-color: vars.$secondary-color;
+  color: #fff;
+}
+
+h1 {
+  color: vars.$primary-color;
+}
