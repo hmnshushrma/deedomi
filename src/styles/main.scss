@@ -1,13 +1,14 @@
 // main.scss
+// Importing external fonts
+
 @use "./_variables" as vars;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 body {
-  font-family: vars.$font-family;
-  margin: 0;
-  background-color: vars.$secondary-color;
-  color: #fff;
+  font-family: "Inter", sans-serif;
+  background-color: vars.$brand-50; // Use the rgba color as background
 }
 
 h1 {
-  color: vars.$primary-color;
+  color: vars.$brand-primary;
 }
