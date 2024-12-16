@@ -8,47 +8,50 @@
         background-image: url(/src/assets/images/hero_bg.jpeg);
         background-repeat: no-repeat;
         background-size: 100%;
-    }
 
-
-    .header_nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 30px;
-        background-color: vars.$background-color;
-
-        // Logo Styling
-        .logo {
-            height: 40px; // Adjust based on logo size
-            display: block;
-        }
-
-        // Navigation List
-        .nav__list {
+        .header_nav {
             display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
+            align-items: center;
+            // justify-content: ;
+            padding: 10px 30px;
+            background-color: vars.$background-color;
 
-            li {
-                color: vars.$white;
-                font-family: vars.$font-family;
-                margin-right: 30px;
-                font-size: 16px;
-                cursor: pointer;
-                white-space: nowrap;
+            // Logo Styling
+            .logo {
+                height: 40px; // Adjust based on logo size
+                display: block;
+            }
 
-                &:hover {
-                    text-decoration: underline;
-                }
+            // Navigation List
+            .nav__list {
+                display: flex;
+                list-style: none;
+                align-items: center;
+                margin: 0;
+                padding: 0;
 
-                &:last-child {
-                    margin-right: 0; // Removes margin on the last item
+                li {
+                    color: vars.$white;
+                    font-family: vars.$font-family;
+                    margin-right: 30px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    white-space: nowrap;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                    &:last-child {
+                        margin-right: 0; // Removes margin on the last item
+                    }
                 }
             }
         }
     }
+
+
+
 
     // Optional styling for blue outline effect
     .logo {
