@@ -2,9 +2,7 @@
 // Importing external fonts
 
 @use "./_variables" as vars;
-@use './hero.scss';
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Outfit:wght@100..900&display=swap');
-// @use './hero.section';
 
 
 body {
@@ -15,4 +13,11 @@ body {
 
 h1 {
   color: vars.$brand-primary;
+}
+
+.page {
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
 }

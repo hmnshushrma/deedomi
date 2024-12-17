@@ -1,4 +1,4 @@
-@use "./_variables" as vars;
+@use "../../styles/variables" as vars;
 
 
 .hero {
@@ -58,11 +58,5 @@
         outline: 2px solid vars.$secondary-color;
         padding: 2px;
         border-radius: 4px; // Slight rounding for aesthetics
-    }
-}
-
-.operation {
-    &__container {
-        
     }
 }
