@@ -1,62 +1,123 @@
 @use "../../styles/variables" as vars;
 
-
 .hero {
-    &__container {
-        position: relative;
-        height: 100vh;
-        background-image: url(/src/assets/images/hero_bg.jpeg);
-        background-repeat: no-repeat;
-        background-size: 100%;
+  &__container {
+    position: relative;
+    height: 100vh;
+    // background-image: url(/src/assets/images/hero_bg.jpeg);
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 100%
+      ),
+      url(/src/assets/images/hero_bg.jpeg) lightgray 50% / cover no-repeat;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    &--text--container {
+      width: 72%;
+      padding-top: 13%;
+    }
 
-        .header_nav {
-            display: flex;
-            align-items: center;
-            // justify-content: ;
-            padding: 10px 30px;
-            background-color: vars.$background-color;
+    .header_nav {
+      display: flex;
+      align-items: center;
+      // justify-content: ;
+      padding: 10px 30px;
+      background-color: vars.$background-color;
 
-            // Logo Styling
-            .logo {
-                height: 40px; // Adjust based on logo size
-                display: block;
-            }
+      // Logo Styling
+      .logo {
+        height: 40px; // Adjust based on logo size
+        display: block;
+      }
 
-            // Navigation List
-            .nav__list {
-                display: flex;
-                list-style: none;
-                align-items: center;
-                margin: 0;
-                padding: 0;
+      // Navigation List
+      .nav__list {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        margin: 0;
+        padding: 0;
 
-                li {
-                    color: vars.$white;
-                    font-family: vars.$font-family;
-                    margin-right: 30px;
-                    font-size: 16px;
-                    cursor: pointer;
-                    white-space: nowrap;
+        li {
+          color: vars.$white;
+          font-family: vars.$font-family;
+          margin-right: 30px;
+          font-size: 16px;
+          cursor: pointer;
+          white-space: nowrap;
 
-                    &:hover {
-                        text-decoration: underline;
-                    }
+          &:hover {
+            text-decoration: underline;
+          }
 
-                    &:last-child {
-                        margin-right: 0; // Removes margin on the last item
-                    }
-                }
-            }
+          &:last-child {
+            margin-right: 0; // Removes margin on the last item
+          }
         }
+      }
     }
-
-
-
-
-    // Optional styling for blue outline effect
-    .logo {
-        outline: 2px solid vars.$secondary-color;
-        padding: 2px;
-        border-radius: 4px; // Slight rounding for aesthetics
+  }
+  &__title {
+    color: vars.$white;
+    text-align: center;
+    text-shadow: 0px 0px 9px vars.$brand-shadow-text;
+    font-family: Outfit;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 150%; /* 84px */
+    text-transform: uppercase;
+    margin: 0px;
+  }
+  &__description {
+    width: 842.897px;
+    color: vars.$white;
+    text-align: center;
+    font-family: Onest;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 175%; /* 35px */
+    margin: 0 auto;
+  }
+  &__stats {
+    display: flex;
+    padding: 10px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(126px);
+    width: fit-content;
+    // justify-content: center;
+    margin: 0 auto;
+    p {
+      margin: 0px;
     }
+    &--images-icon {
+      display: flex;
+      .images-icon-overlay {
+        &:nth-last-child(-n + 2) {
+          border: 1.5px solid rgba(255, 255, 255, 0.25);
+          margin-left: -8px;
+        }
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  // Optional styling for blue outline effect
+  .logo {
+    outline: 2px solid vars.$secondary-color;
+    padding: 2px;
+    border-radius: 4px; // Slight rounding for aesthetics
+  }
 }
