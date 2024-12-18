@@ -13,9 +13,10 @@
 
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     &--text--container {
       width: 72%;
-      padding-top: 180px;
     }
   }
   &__title {
@@ -75,29 +76,5 @@
     outline: 2px solid vars.$secondary-color;
     padding: 2px;
     border-radius: 4px;
-  }
-  &__cta {
-    margin: 36px auto;
-    width: 65%;
-    display: flex;
-    justify-content: center;
-
-    .cta-button {
-      &:last-child {
-        margin-left: 20px;
-      }
-
-      padding: 14px 24px;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-      border-radius: 50px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background: #fff;
-      backdrop-filter: blur(38px);
-      img {
-        margin-right: 8px;
-      }
-    }
   }
 }

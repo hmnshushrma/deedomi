@@ -1,0 +1,30 @@
+@use "../../styles/variables" as vars;
+
+.cta-app-buttons {
+  margin: 36px auto;
+  width: 65%;
+  display: flex;
+  justify-content: center;
+
+  .cta-button {
+    &:first-child {
+      margin-right: 10px;
+    }
+    &:last-child {
+      margin-left: 10px;
+    }
+    padding: 14px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    background: vars.$white;
+    backdrop-filter: blur(38px);
+    color: vars.$black;
+    img {
+      margin-right: 8px;
+    }
+  }
+}
