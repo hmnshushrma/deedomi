@@ -1,7 +1,12 @@
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
 import './hero.scss';
 import image1 from '../../assets/images/img-1.png';
 import image2 from '../../assets/images/img-2.png';
 import image3 from '../../assets/images/img-3.png';
+import appleIcon from '../../assets/images/apple-logo.svg';
+import playStoreIcon from '../../assets/images/play-store-logo.svg';
+
 const HeroContainer = () => {
   return (
     <>
@@ -25,16 +30,24 @@ const HeroContainer = () => {
             mobile DEEDOMI.
           </p>
 
-          {/* <!-- <div className="hero__cta">
-          <a href="https://www.apple.com/app-store/" className="cta-button apple" aria-label="Télécharger sur l'App Store">
-            <img src="apple-icon.png" alt="App Store Icon" /> Télécharger sur
-            l'App Store
-          </a>
-          <a href="https://play.google.com/" className="cta-button google" aria-label="Télécharger sur Google Play">
-            <img src="google-play-icon.png" alt="Google Play Icon" />
-            Télécharger sur Google Play
-          </a>
-        </div> --> */}
+          <div className="hero__cta">
+            <a
+              href="https://www.apple.com/app-store/"
+              className="cta-button apple"
+              aria-label="Télécharger sur l'App Store"
+            >
+              <img src={appleIcon} alt="App Store Icon" /> Télécharger sur l'App
+              Store
+            </a>
+            <a
+              href="https://play.google.com/"
+              className="cta-button google"
+              aria-label="Télécharger sur Google Play"
+            >
+              <img src={playStoreIcon} alt="Google Play Icon" />
+              Télécharger sur Google Play
+            </a>
+          </div>
         </div>
       </section>
     </>

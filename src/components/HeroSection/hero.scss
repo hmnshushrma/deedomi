@@ -4,60 +4,18 @@
   &__container {
     position: relative;
     height: 100vh;
-    // background-image: url(/src/assets/images/hero_bg.jpeg);
     background: linear-gradient(
         0deg,
         rgba(0, 0, 0, 0.4) 0%,
         rgba(0, 0, 0, 0.4) 100%
       ),
       url(/src/assets/images/hero_bg.jpeg) lightgray 50% / cover no-repeat;
-    background-repeat: no-repeat;
-    background-size: 100%;
+
     display: flex;
     justify-content: center;
     &--text--container {
       width: 72%;
-      padding-top: 13%;
-    }
-
-    .header_nav {
-      display: flex;
-      align-items: center;
-      // justify-content: ;
-      padding: 10px 30px;
-      background-color: vars.$background-color;
-
-      // Logo Styling
-      .logo {
-        height: 40px; // Adjust based on logo size
-        display: block;
-      }
-
-      // Navigation List
-      .nav__list {
-        display: flex;
-        list-style: none;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-
-        li {
-          color: vars.$white;
-          font-family: Onest;
-          margin-right: 30px;
-          font-size: 16px;
-          cursor: pointer;
-          white-space: nowrap;
-
-          &:hover {
-            text-decoration: underline;
-          }
-
-          &:last-child {
-            margin-right: 0; // Removes margin on the last item
-          }
-        }
-      }
+      padding-top: 180px;
     }
   }
   &__title {
@@ -90,8 +48,8 @@
     align-items: center;
     gap: 8px;
     border-radius: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(126px);
     width: fit-content;
     margin: 0 auto 28px auto;
@@ -113,10 +71,33 @@
     }
   }
 
-  // Optional styling for blue outline effect
   .logo {
     outline: 2px solid vars.$secondary-color;
     padding: 2px;
-    border-radius: 4px; // Slight rounding for aesthetics
+    border-radius: 4px;
+  }
+  &__cta {
+    margin: 36px auto;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+
+    .cta-button {
+      &:last-child {
+        margin-left: 20px;
+      }
+
+      padding: 14px 24px;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      border-radius: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #fff;
+      backdrop-filter: blur(38px);
+      img {
+        margin-right: 8px;
+      }
+    }
   }
 }
