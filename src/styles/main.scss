@@ -2,18 +2,22 @@
 // Importing external fonts
 
 @use "./_variables" as vars;
-@use './hero.scss';
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-
-// @use './hero.section';
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Outfit:wght@100..900&display=swap');
 
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Onest";
   background-color: vars.$brand-50; // Use the rgba color as background
   margin: 0px;
 }
 
 h1 {
   color: vars.$brand-primary;
+}
+
+.page {
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
 }

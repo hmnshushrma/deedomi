@@ -1,0 +1,103 @@
+@use "../../styles/variables" as vars;
+
+.hero {
+  &__container {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 100%
+      ),
+      url(/src/assets/images/hero_bg.jpeg) lightgray 50% / cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    &--text--container {
+      width: 72%;
+      padding-top: 180px;
+    }
+  }
+  &__title {
+    color: vars.$white;
+    text-align: center;
+    text-shadow: 0px 0px 9px vars.$brand-shadow-text;
+    font-family: Outfit;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 150%; /* 84px */
+    text-transform: uppercase;
+    margin: 0px;
+  }
+  &__description {
+    width: 842.897px;
+    color: vars.$white;
+    text-align: center;
+    font-family: Onest;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 175%; /* 35px */
+    margin: 0 auto;
+  }
+  &__stats {
+    display: flex;
+    padding: 10px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(126px);
+    width: fit-content;
+    margin: 0 auto 28px auto;
+    p {
+      margin: 0px;
+    }
+    &--images-icon {
+      display: flex;
+      .images-icon-overlay {
+        &:nth-last-child(-n + 2) {
+          border: 1.5px solid rgba(255, 255, 255, 0.25);
+          margin-left: -8px;
+        }
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .logo {
+    outline: 2px solid vars.$secondary-color;
+    padding: 2px;
+    border-radius: 4px;
+  }
+  &__cta {
+    margin: 36px auto;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+
+    .cta-button {
+      &:last-child {
+        margin-left: 20px;
+      }
+
+      padding: 14px 24px;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      border-radius: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #fff;
+      backdrop-filter: blur(38px);
+      img {
+        margin-right: 8px;
+      }
+    }
+  }
+}
