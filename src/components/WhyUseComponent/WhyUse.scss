@@ -19,9 +19,12 @@
   &__features {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 2rem; // Space between cards
     flex-wrap: wrap;
     margin-top: 1.5rem;
+    max-width: 800px; // Ensures 2 columns on all screens
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__feature {
@@ -66,7 +69,7 @@
     color: var(--Gray-900, vars.$text-grey-900);
     text-align: center;
     font-family: Outfit;
-    font-size: 24px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 800;
     line-height: 150%;
