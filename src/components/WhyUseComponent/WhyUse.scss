@@ -1,0 +1,94 @@
+@use "../../styles/variables" as vars;
+
+.why-deedomi {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: vars.$white;
+
+  &__title {
+    font-size: 2rem;
+    color: vars.$black;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &--highlight {
+      color: vars.$brand-primary;
+    }
+  }
+
+  &__features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; // Space between cards
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    max-width: 800px; // Ensures 2 columns on all screens
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__feature {
+    padding: 1rem;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: vars.$white;
+    display: flex;
+    padding: 32px;
+    flex: 0 1 calc(40% - 2rem);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 0.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &--recycle {
+      background-image: url("../../assets/images/icon-1.png");
+    }
+
+    &--leaf {
+      background-image: url("../../assets/images/icon-2.png");
+    }
+
+    &--handshake {
+      background-image: url("../../assets/images/icon-4.png");
+    }
+
+    &--tshirt {
+      background-image: url("../../assets/images/icon-3.png");
+    }
+  }
+
+  &__text {
+    color: var(--Gray-900, vars.$text-grey-900);
+    text-align: center;
+    font-family: Outfit;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 150%;
+    text-transform: uppercase;
+    margin: 0px 5px;
+  }
+
+  &__app-preview {
+    margin-top: 2rem;
+  }
+  &__content {
+    display: flex;
+    justify-content: center;
+    padding: 0px 10em 0px 5em;
+    align-items: center;
+  }
+  &__image {
+    width: 350px;
+    height: 713.397px;
+    flex-shrink: 0;
+  }
+}
