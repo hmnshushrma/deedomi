@@ -2,7 +2,6 @@
 
 .why-deedomi {
   text-align: center;
-  padding: 2rem;
   font-family: Arial, sans-serif;
   background-color: vars.$white;
 
@@ -10,6 +9,7 @@
     font-size: 2rem;
     color: vars.$black;
     font-weight: bold;
+    text-transform: uppercase;
 
     &--highlight {
       color: vars.$brand-primary;
@@ -25,66 +25,67 @@
   }
 
   &__feature {
-    display: flex;
-    flex: 0 1 calc(40% - 2rem);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 120px;
     padding: 1rem;
-    border: 1px solid vars.$black-50;
     border-radius: 16px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: vars.$white;
-
-    &:hover {
-      transform: translateY(-4px);
-      transition: all 0.3s ease-in-out;
-    }
+    display: flex;
+    padding: 32px;
+    flex: 0 1 calc(40% - 2rem);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
   }
 
   &__icon {
-    width: 40px;
-    height: 40px;
+    width: 52px;
+    height: 52px;
     margin-bottom: 0.5rem;
     background-size: contain;
     background-repeat: no-repeat;
 
     &--recycle {
-      background-image: url("icons/recycle.png");
+      background-image: url("../../assets/images/icon-1.png");
     }
 
     &--leaf {
-      background-image: url("icons/leaf.png");
+      background-image: url("../../assets/images/icon-2.png");
     }
 
     &--handshake {
-      background-image: url("icons/handshake.png");
+      background-image: url("../../assets/images/icon-4.png");
     }
 
     &--tshirt {
-      background-image: url("icons/tshirt.png");
+      background-image: url("../../assets/images/icon-3.png");
     }
   }
 
   &__text {
-    font-size: 1rem;
-    font-weight: bold;
-    color: vars.$brand-400;
+    color: var(--Gray-900, vars.$text-grey-900);
     text-align: center;
+    font-family: Outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 150%;
+    text-transform: uppercase;
+    margin: 0px 5px;
   }
 
   &__app-preview {
     margin-top: 2rem;
-
-    img {
-      max-width: 300px;
-      border-radius: 12px;
-    }
   }
   &__content {
     display: flex;
     justify-content: center;
+    padding: 0px 10em 0px 5em;
+    align-items: center;
+  }
+  &__image {
+    width: 350px;
+    height: 713.397px;
+    flex-shrink: 0;
   }
 }
