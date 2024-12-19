@@ -1,6 +1,6 @@
 import React from 'react';
 import './WhyUse.scss';
-import appPReview from '../../assets/images/app-preview.png';
+import appImage from '../../assets/images/app-preview.png';
 const WhyUseDeedomi = () => {
   return (
     <div className="why-deedomi">
@@ -33,7 +33,7 @@ const WhyUseDeedomi = () => {
         </div>
         <div className="why-deedomi__app-preview">
           <img
-            src={appPReview}
+            src={appImage}
             alt="Deedomi App Preview"
             className="why-deedomi__image"
           />
