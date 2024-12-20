@@ -7,6 +7,7 @@ import WhyUseDeedomi from './components/WhyUseComponent/WhyUseComponent';
 import KeyStats from './components/KeyStats/KeyStats';
 import './styles/main.scss';
 import OperationsComponent from './components/Operations/OperationsComponent';
+import Footer from './components/Footer/Footer';
 function App() {
   return (
     <div className="page__container">
@@ -16,6 +17,7 @@ function App() {
       <WhyUseDeedomi />
       <KeyStats />
       <OperationsComponent />
+      <Footer />
     </div>
   );
 }
