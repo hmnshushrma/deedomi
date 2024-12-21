@@ -3,7 +3,7 @@ import './WhyUse.scss';
 import appImage from '../../assets/images/app-preview.png';
 const WhyUseDeedomi = () => {
   return (
-    <div className="why-deedomi">
+    <div className="why-deedomi" id="pourquoi">
       <h2 className="why-deedomi__title">
         Pourquoi utiliser{' '}
         <span className="why-deedomi__title--highlight">DEEDOMI</span> ?

@@ -28,7 +28,7 @@ const statsData: StatsItem[] = [
 
 const KeyStats: React.FC = () => {
   return (
-    <section className="key-stats">
+    <section className="key-stats" id="chiffres">
       <h2 className="key-stats__title">
         QUELQUES CHIFFRES CLÉS SUR LA SITUATION ACTUELLE
       </h2>

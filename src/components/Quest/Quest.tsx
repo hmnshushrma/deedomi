@@ -4,7 +4,7 @@ import CTAappButtons from '../CTAappButtons/CTAappButtons';
 
 const Quest: React.FC = () => {
   return (
-    <section className="quest">
+    <section className="quest" id='quecest'>
       <div className="quest__container">
         <h3 className="quest__title">QU’EST-CE QUE C’EST ?</h3>
         <h1 className="quest__headline">

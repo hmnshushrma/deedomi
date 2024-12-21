@@ -35,7 +35,7 @@ const OperationsComponent = () => {
         }
     ]
     return (
-        <section className="operations">
+        <section className="operations" id="fonctionnement">
             <div className='operations__container'>
             <div className="operations__heading">
                 <h5 className="operations__heading--title">le fonctionnement</h5>
@@ -54,7 +54,7 @@ const OperationsComponent = () => {
                             {stage.description}
                         </p>
                     </div>
-                    <div className='operations__stage--img'>
+                    <div className='operations__stage--img' >
                         <img src={stage.image} alt="stage1" height="381px" width="575px"/>
                     </div>
                 </div>  
