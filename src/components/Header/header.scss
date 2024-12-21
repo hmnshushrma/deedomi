@@ -3,25 +3,18 @@
 .header_nav {
   display: flex;
   align-items: center;
-
-  @media (max-width: 1280px) {
-    justify-content: space-between;
-    /* Ensure elements spread out */
-  }
-
-  & {
-    position: fixed;
-    top: 0;
-    z-index: 10;
-    left: 0;
-    right: 0;
-    height: 86px;
-    padding: 0 20px;
-    /* Add some padding for spacing */
-    background: linear-gradient(180deg,
-        rgba(0, 0, 0, 0.5) 0%,
-        rgba(0, 0, 0, 0) 100%);
-  }
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  height: 86px;
+  padding: 0 20px; /* Add some padding for spacing */
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
 
   // Logo Styling
   .logo {
@@ -47,11 +40,9 @@
       font-size: 16px;
       cursor: pointer;
       white-space: nowrap;
-
       a {
         color: vars.$white;
       }
-
       &:hover {
         text-decoration: underline;
       }
@@ -60,10 +51,11 @@
         margin-right: 0; // Removes margin on the last item
       }
     }
-
     @media (max-width: 1280px) {
-      display: none;
-      /* Hide for smaller screens */
+      display: none; /* Hide for smaller screens */
     }
+  }
+  @media (max-width: 1280px) {
+    justify-content: space-between; /* Ensure elements spread out */
   }
 }
