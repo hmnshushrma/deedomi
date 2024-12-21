@@ -30,6 +30,9 @@
     line-height: 150%; /* 84px */
     text-transform: uppercase;
     margin: 0px;
+    @media (max-width: 1280px) {
+      font-size: 35px;
+    }
   }
   &__description {
     width: 75%;
@@ -41,6 +44,9 @@
     font-weight: 500;
     line-height: 175%; /* 35px */
     margin: 0 auto;
+    @media (max-width: 1280px) {
+      font-size: 18px;
+    }
   }
   &__stats {
     display: flex;

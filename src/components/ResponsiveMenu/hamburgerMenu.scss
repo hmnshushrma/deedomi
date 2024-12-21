@@ -11,7 +11,7 @@
     right: 0;
     background: white;
     width: 250px;
-    border: 1px solid #ccc;
+    // border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: none; /* Hidden by default */
@@ -32,9 +32,10 @@
         color: black;
 
         li {
-          padding: 10px 0;
+          padding: 10px;
           border-bottom: 1px solid #eaeaea;
           cursor: pointer;
+          border-radius: 8px;
 
           &:last-child {
             border-bottom: none;

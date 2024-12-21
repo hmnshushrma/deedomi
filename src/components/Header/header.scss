@@ -9,22 +9,32 @@
   left: 0;
   right: 0;
   height: 86px;
-  padding: 0 20px; /* Add some padding for spacing */
+  padding: 0 20px;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.5) 0%,
     rgba(0, 0, 0, 0) 100%
   );
+  transition: background 0.5s ease-in-out; /* Smoother transition for scrolling effect */
 
-  // Logo Styling
+  &.scrolled {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+  }
+
   .logo {
     width: 137.648px;
     height: 22px;
     display: block;
     margin-left: 72px;
+    @media (max-width: 1280px) {
+      margin-left: 0;
+    }
   }
 
-  // Navigation List
   .nav__list {
     display: flex;
     list-style: none;
@@ -40,22 +50,26 @@
       font-size: 16px;
       cursor: pointer;
       white-space: nowrap;
+
       a {
         color: vars.$white;
       }
+
       &:hover {
         text-decoration: underline;
       }
 
       &:last-child {
-        margin-right: 0; // Removes margin on the last item
+        margin-right: 0;
       }
     }
+
     @media (max-width: 1280px) {
-      display: none; /* Hide for smaller screens */
+      display: none;
     }
   }
+
   @media (max-width: 1280px) {
-    justify-content: space-between; /* Ensure elements spread out */
+    justify-content: space-between;
   }
 }
