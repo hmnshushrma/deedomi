@@ -1,0 +1,156 @@
+@use '../../styles/_variables.scss' as vars;
+
+.footer {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        padding: 72px 72px 24px 72px;
+        gap: 40px;
+    }
+
+    &__content {
+        display: flex;
+    }
+
+    &__download {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-right: 150px;
+        max-width: 368px;
+
+        &--text {
+            color: var(--Grey, vars.$brand-dark-o-85);
+            font-family: Onest;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 175%;
+        }
+
+        &--button {
+            padding: 14px 24px;
+            border-radius: 6px;
+            background: var(--Brand, vars.$brand-primary);
+            align-self: flex-start;
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        flex-direction: column;
+        color: vars.$black;
+        margin-right: 72px;
+
+        &--title {
+            color: var(--Text, vars.$brand-text);
+            font-family: Onest;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 18px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        &--list {
+            padding: 0;
+        }
+
+        &--list-item {
+            color: var(--Grey, vars.$brand-dark-o-85);
+            font-family: Onest;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 48px;
+        }
+    }
+
+    &__other {
+        color: vars.$black;
+        margin-right: 72px;
+
+        &--title {
+            color: var(--Text, vars.$brand-text);
+            font-family: Onest;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 18px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin: 0 auto;
+        }
+
+        &--list {
+            padding: 0;
+        }
+
+        &--list-item {
+            color: var(--Grey, vars.$brand-dark-o-85);
+            font-family: Onest;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 48px;
+        }
+    }
+
+    &__social-network {
+        display: flex;
+        flex-direction: column;
+        color: vars.$black;
+
+        &--title {
+            color: var(--Text, vars.$brand-text);
+            font-family: Onest;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 18px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin: 0 auto;
+            margin-bottom: 16px;
+        }
+
+        &--item {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        &--link {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--Brand, vars.$brand-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        &--name {
+            color: var(--Text, vars.$brand-text);
+            font-family: Onest;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+    }
+
+    &__copyright {
+        color: var(--gray-600, #52525B);
+        text-align: center;
+        font-family: Onest;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+}

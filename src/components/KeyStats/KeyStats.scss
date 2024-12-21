@@ -1,0 +1,49 @@
+@use "../../styles/variables" as vars;
+
+.key-stats {
+  padding: 3rem 1.5rem;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 2rem;
+    color: var(--Text, vars.$brand-text);
+    font-family: Outfit;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 150%;
+    text-transform: uppercase;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-evenly;
+
+    margin-top: 1rem;
+  }
+
+  &__item {
+    flex: 1 1 calc(25% - 2rem); // Ensures 4 items per row on larger screens
+    max-width: 17.5%; // Restrict item width
+    text-align: center;
+
+    border-radius: 8px;
+
+    &:hover {
+      transform: translateY(-5px);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &__value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: vars.$brand-primary;
+  }
+
+  &__description {
+    font-size: 1rem;
+    color: vars.$brand-400;
+    margin-top: 0.5rem;
+  }
+}

@@ -1,0 +1,122 @@
+@use "../../styles/_variables.scss" as vars;
+
+.operations {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 72px;
+    background-color: vars.$brand-dark;
+    gap: 64px;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    &--title {
+      color: vars.$white;
+      text-align: center;
+      font-family: Onest;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      letter-spacing: 0.75px;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    &--subtitle {
+      color: vars.$white;
+      font-family: Outfit;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 150%;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 0;
+      margin-top: 16px;
+
+      &--highlight {
+        color: vars.$brand-primary;
+      }
+    }
+
+    &--subtext {
+      color: vars.$white;
+      text-align: center;
+      font-family: Onest;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 175%;
+      max-width: 905px;
+      margin: 0;
+      margin-top: 12px;
+    }
+  }
+
+  &__stages {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    padding: 0px 85px;
+  }
+
+  &__stage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 32px;
+    &--text {
+      flex: 1;
+    }
+    &--img {
+      flex: 1;
+    }
+    &--number {
+      color: vars.$brand-primary;
+      text-align: left;
+      font-family: Onest;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin: 0 auto;
+    }
+
+    &--title {
+      color: vars.$white;
+      font-family: Onest;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin: 8px auto 10px;
+    }
+
+    &--description {
+      color: vars.$white;
+      font-family: Onest;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 175%;
+      margin: 0 auto;
+    }
+
+    // &--img {
+    //     background-size: cover;
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    //     width: 575px;
+    //     height: 381px;
+    // }
+  }
+}

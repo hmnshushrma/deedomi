@@ -1,0 +1,52 @@
+@use "../../styles/variables" as vars;
+
+.quest {
+  //   background-color: vars.$background-grey;
+
+  &__container {
+    text-align: center;
+    padding: 2rem;
+    background-color: vars.$white;
+    border-radius: 8px;
+    padding-top: 60px;
+  }
+
+  &__title {
+    color: var(--Grey, vars.$brand-dark-o-85);
+    text-align: center;
+    font-family: Onest;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  &__headline {
+    color: vars.$brand-text;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 150%; /* 54px */
+    text-transform: uppercase;
+  }
+
+  &__highlight {
+    color: vars.$brand-primary;
+  }
+
+  &__description {
+    color: vars.$black-700;
+    width: 65%;
+    text-align: center;
+    font-family: Onest;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 175%; /* 28px */
+    margin: 0 auto;
+  }
+}
