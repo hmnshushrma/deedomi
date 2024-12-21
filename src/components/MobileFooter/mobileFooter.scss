@@ -1,0 +1,49 @@
+@use '../../styles/variables.scss' as vars;
+
+.accordion {
+    margin-top: 20px;
+    width: 100%;
+  
+    &__item {
+      border-bottom: 1px solid #ddd;
+  
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  
+    &__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 15px;
+      background-color: vars.$brand-primary;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 1px 0;
+  
+      &-icon {
+        font-weight: bold;
+      }
+    }
+  
+    &__content {
+      padding: 5px;
+      background-color: #fff;
+      color: vars.$black;
+  
+      &-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+  
+        &-item {
+          padding: 5px 0;
+        }
+      }
+    }
+  }
+  
