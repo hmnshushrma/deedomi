@@ -7,14 +7,13 @@ interface AccordionSection {
 }
 
 interface MobileFooterProps {
-  data: any | null;
+  data: AccordionSection[];
 }
 
 const MobileFooter: React.FC<MobileFooterProps> = ({ data }) => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  // Check screen width to show accordion only below 1280px
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 1280);
@@ -32,34 +31,22 @@ const MobileFooter: React.FC<MobileFooterProps> = ({ data }) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  // const data: AccordionSection[] = [
-  //   {
-  //     title: 'NAVIGATION',
-  //     content: ['Qui sommes-nous ?', 'Le fonctionnement', 'Blog', 'Nous contacter'],
-  //   },
-  //   {
-  //     title: 'AUTRES',
-  //     content: ['Mentions légales', 'Politique de confidentialité', 'Conditions générales d’utilisation'],
-  //   },
-  //   {
-  //     title: 'RÉSEAUX SOCIAUX',
-  //     content: ['Facebook', 'Instagram', 'LinkedIn', 'X/Twitter'],
-  //   },
-  // ];
-
-  if (!isMobile) return null; // Only render for mobile view
+  if (!isMobile) return null;
 
   return (
     <div className="accordion">
-      {data.map((section: { title: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; content: any[]; }, index: number) => (
+      {data.map((section, index) => (
         <div key={index} className="accordion__item">
           <div
             className="accordion__title"
             onClick={() => toggleAccordion(index)}
             aria-expanded={activeIndex === index}
           >
-            {section.title}
-            <span className="accordion__title-icon">{activeIndex === index ? '^' : '>'}</span>
+            <span className="accordion__title-text">{section.title}</span>
+            <span
+              className={`accordion__title-icon ${activeIndex === index ? 'expanded' : ''
+                }`}
+            ></span>
           </div>
           {activeIndex === index && (
             <div className="accordion__content">
