@@ -1,6 +1,7 @@
 @use "../../styles/variables" as vars;
 
 .quest {
+  scroll-margin-top: 50px;
   //   background-color: vars.$background-grey;
 
   &__container {

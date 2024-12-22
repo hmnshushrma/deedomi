@@ -1,6 +1,7 @@
 @use "../../styles/_variables.scss" as vars;
 
 .operations {
+  scroll-margin-top: 85px;
   &__container {
     display: flex;
     flex-direction: column;
