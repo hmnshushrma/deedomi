@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import deemodiLogo from '../../assets/images/logo-brand.png';
+import deemodiLogo from '../../assets/images/deemodi-logo.svg';
 import facebookIcon from '../../assets/images/facebook.svg';
 import instagramIcon from '../../assets/images/instagram.svg';
 import linkedInIcon from '../../assets/images/linkedin.svg';
