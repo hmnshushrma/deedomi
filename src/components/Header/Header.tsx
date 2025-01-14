@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './header.scss';
-import headerLogo from '../../assets/images/logo.png';
+import headerLogo from '../../assets/images/deemodi-logo-white.svg';
 import HamburgerMenu from '../ResponsiveMenu/HamburgerMenu';
 
 export default function Header() {
