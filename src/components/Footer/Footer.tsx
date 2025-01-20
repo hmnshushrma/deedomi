@@ -34,7 +34,7 @@ const Footer = () => {
             id: 2,
             name: 'Instagram',
             icon: instagramIcon,
-            link: 'https://www.facebook.com/deemodi',
+            link: `https://www.instagram.com/deedomiofficiel?igsh=MTZtcDQyYnhjb3h0Mw==`,
         },
         {
             id: 3,
