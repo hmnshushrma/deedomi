@@ -7,10 +7,11 @@
   scroll-margin-top: 60px;
 
   &__title {
-    font-size: 2rem;
+    font-size: 2.25rem;
     color: vars.$black;
     font-weight: bold;
     text-transform: uppercase;
+    word-spacing: 0.625rem;
 
     &--highlight {
       color: vars.$brand-primary;
