@@ -5,7 +5,7 @@ const WhyUseDeedomi = () => {
   return (
     <div className="why-deedomi" id="pourquoi">
       <h2 className="why-deedomi__title">
-        Pourquoi utiliser{' '}
+        Pourquoi {' '} utiliser{' '}
         <span className="why-deedomi__title--highlight">DEEDOMI</span> ?
       </h2>
       <div className="why-deedomi__content">
