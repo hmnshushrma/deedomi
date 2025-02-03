@@ -1,4 +1,5 @@
 @use "../../styles/variables" as vars;
+@use "../../styles/_breakpoints.scss" as breakpoints;
 
 .why-deedomi {
   text-align: center;
@@ -15,6 +16,13 @@
 
     &--highlight {
       color: vars.$brand-primary;
+    }
+    @include breakpoints.mobile {
+      text-align: center;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 150%;
     }
   }
 
@@ -45,6 +53,11 @@
     @media (max-width: 1280px) {
       padding: 15px;
       gap: 10px;
+    }
+
+    @include breakpoints.mobile {
+      flex: 0 1 calc(100% - 2rem);
+      padding: 32px;
     }
   }
 
@@ -85,6 +98,9 @@
     @media (max-width: 1280px) {
       font-size: 15px;
     }
+    @include breakpoints.mobile {
+      font-size: 20px;
+    }
   }
 
   &__app-preview {
@@ -98,6 +114,11 @@
     @media (max-width: 1280px) {
       padding: 0px 3em 0px 3em;
     }
+
+    @include breakpoints.mobile {
+      flex-direction: column;
+      padding: 0px 1em 0px 1em;
+    }
   }
   &__image {
     width: 350px;
@@ -106,6 +127,9 @@
     @media (max-width: 1280px) {
       width: 200px;
       height: auto;
+    }
+    @include breakpoints.mobile {
+      width: 100%;
     }
   }
 }

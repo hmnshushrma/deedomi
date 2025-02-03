@@ -28,3 +28,9 @@ $black: #000000;
 $secondary-color: #326dd0; // For the blue outline
 $background-color: #1a3b2e; // Dark green background
 $text-grey-900: #101828;
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}

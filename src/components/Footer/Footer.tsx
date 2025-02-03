@@ -9,13 +9,20 @@ import './footerStyles.scss';
 
 const Footer = () => {
     const [isMobile, setIsMobile] = useState(false);
+    const [isTablet, setIsTablet] = useState(false);
+    const [isDesktop, setIsDesktop] = useState(false);
+
+    const handleResize = () => {
+        const width = window.innerWidth;
+
+        // Manage breakpoints
+        setIsMobile(width < 800);                // Mobile: Width < 800px
+        setIsTablet(width >= 800 && width < 1280); // Tablet: 800px ≤ Width < 1280px
+        setIsDesktop(width >= 1280);             // Desktop: Width ≥ 1280px
+    };
 
     useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth < 1280);
-        };
-
-        handleResize();
+        handleResize(); // Check on initial load
         window.addEventListener('resize', handleResize);
 
         return () => {
@@ -77,7 +84,7 @@ const Footer = () => {
                         <button className="footer__download--button">Télécharger l’application</button>
                     </div>
 
-                    {isMobile ? (
+                    {isTablet ? (
                         <MobileFooter data={accordionData} />
                     ) : (
                         <>
@@ -98,20 +105,48 @@ const Footer = () => {
                                     <li className="footer__other--list-item">Conditions générales d’utilisation</li>
                                 </ul>
                             </div>
-                            <div className="footer__social-network">
-                                <h3 className="footer__social-network--title">réseaux sociaux</h3>
-                                {socialMediaDefinitions.map((socialMedia) => (
-                                    <div key={socialMedia.id} className="footer__social-network--item">
-                                        <div
-                                            className="footer__social-network--link"
-                                            onClick={() => window.open(socialMedia.link, '_blank')}
-                                        >
-                                            <img src={socialMedia.icon} alt={socialMedia.name} />
+                            {isDesktop && (<>
+                                <div className="footer__social-network">
+                                    <h3 className="footer__social-network--title">réseaux sociaux</h3>
+                                    {socialMediaDefinitions.map((socialMedia) => (
+                                        <div key={socialMedia.id} className="footer__social-network--item">
+                                            <div
+                                                className="footer__social-network--link"
+                                                onClick={() => window.open(socialMedia.link, '_blank')}
+                                            >
+                                                <img src={socialMedia.icon} alt={socialMedia.name} />
+                                            </div>
+                                            <span className="footer__social-network--name">{socialMedia.name}</span>
                                         </div>
-                                        <span className="footer__social-network--name">{socialMedia.name}</span>
+                                    ))}
+                                </div>
+                            </>
+                            )}
+
+                            {isMobile && (
+                                <>
+                                    <h3 className="footer__social-network__title">réseaux sociaux</h3>
+                                    <div className="footer__social-network__container">
+                                        {socialMediaDefinitions.map((socialMedia) => (
+                                            <div key={socialMedia.id} className="footer__social-network__item">
+                                                <div
+                                                    className="footer__social-network__link"
+                                                    onClick={() => window.open(socialMedia.link, '_blank')}
+                                                >
+                                                    <img
+                                                        src={socialMedia.icon}
+                                                        alt={socialMedia.name}
+                                                        className={`footer__social-network__icon icon--${socialMedia.name.toLowerCase()}`}
+                                                    />
+                                                </div>
+                                                <span className="footer__social-network__name">{socialMedia.name}</span>
+                                            </div>
+                                        ))}
                                     </div>
-                                ))}
-                            </div>
+
+                                </>
+                            )}
+
                         </>
                     )}
                 </div>
