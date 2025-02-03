@@ -1,4 +1,5 @@
 @use "../../styles/variables" as vars;
+@use "../../styles/_breakpoints.scss" as breakpoints;
 
 .cta-app-buttons {
   margin: 36px auto;
@@ -29,5 +30,21 @@
   }
   @media (max-width: 1280px) {
     width: 70%;
+  }
+  @include breakpoints.mobile {
+    width: 80%;
+    display: inline-grid;
+    .cta-button {
+      a {
+        display: block;
+      }
+      &:first-child {
+        margin-right: 0px;
+        margin-bottom: 10px;
+      }
+      &:last-child {
+        margin-left: 0px;
+      }
+    }
   }
 }

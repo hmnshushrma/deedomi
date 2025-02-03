@@ -1,159 +1,242 @@
-@use '../../styles/_variables.scss' as vars;
+@use "../../styles/_variables.scss" as vars;
+@use "../../styles/_breakpoints.scss" as breakpoints;
 
 .footer {
-    &__container {
-        display: flex;
-        flex-direction: column;
-        padding: 72px 72px 24px 72px;
-        gap: 40px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 72px 72px 24px 72px;
+    gap: 40px;
+    @include breakpoints.mobile {
+      padding: 72px 16px 45px 16px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    @media (max-width: 1280px) {
+      flex-direction: column;
+    }
+  }
+
+  &__download {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-right: 150px;
+    max-width: 368px;
+    @include breakpoints.mobile {
+      margin-right: 0px;
+      max-width: 100%;
+      gap: 6px;
     }
 
-    &__content {
-        display: flex;
-        @media (max-width: 1280px) {
-            flex-direction: column;
-        }
+    &--text {
+      color: var(--Grey, vars.$brand-dark-o-85);
+      font-family: Onest;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 175%;
+      @include breakpoints.mobile {
+        font-size: 15px;
+      }
     }
 
-    &__download {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        margin-right: 150px;
-        max-width: 368px;
+    &--button {
+      padding: 14px 24px;
+      border-radius: 6px;
+      background: var(--Brand, vars.$brand-primary);
+      align-self: flex-start;
+    }
+  }
 
-        &--text {
-            color: var(--Grey, vars.$brand-dark-o-85);
-            font-family: Onest;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 175%;
-        }
-
-        &--button {
-            padding: 14px 24px;
-            border-radius: 6px;
-            background: var(--Brand, vars.$brand-primary);
-            align-self: flex-start;
-        }
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    color: vars.$black;
+    margin-right: 72px;
+    @include breakpoints.mobile {
+      display: flex;
+      margin-top: 40px;
+      margin-right: 0px;
     }
 
-    &__navigation {
-        display: flex;
-        flex-direction: column;
-        color: vars.$black;
-        margin-right: 72px;
-
-        &--title {
-            color: var(--Text, vars.$brand-text);
-            font-family: Onest;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 18px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin: 0;
-        }
-
-        &--list {
-            padding: 0;
-        }
-
-        &--list-item {
-            color: var(--Grey, vars.$brand-dark-o-85);
-            font-family: Onest;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 48px;
-        }
+    &--title {
+      color: var(--Text, vars.$brand-text);
+      font-family: Onest;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 18px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 0;
     }
 
-    &__other {
-        color: vars.$black;
-        margin-right: 72px;
-
-        &--title {
-            color: var(--Text, vars.$brand-text);
-            font-family: Onest;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 18px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin: 0 auto;
-        }
-
-        &--list {
-            padding: 0;
-        }
-
-        &--list-item {
-            color: var(--Grey, vars.$brand-dark-o-85);
-            font-family: Onest;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 48px;
-        }
+    &--list {
+      padding: 0;
     }
 
-    &__social-network {
+    &--list-item {
+      color: var(--Grey, vars.$brand-dark-o-85);
+      font-family: Onest;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 48px;
+    }
+  }
+
+  &__other {
+    color: vars.$black;
+    margin-right: 72px;
+
+    &--title {
+      color: var(--Text, vars.$brand-text);
+      font-family: Onest;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 18px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 0 auto;
+    }
+
+    &--list {
+      padding: 0;
+    }
+
+    &--list-item {
+      color: var(--Grey, vars.$brand-dark-o-85);
+      font-family: Onest;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 48px;
+    }
+  }
+
+  &__social-network {
+    display: flex;
+    flex-direction: column;
+    color: vars.$black;
+
+    &--title {
+      color: var(--Text, vars.$brand-text);
+      font-family: Onest;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 18px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 0 auto;
+      margin-bottom: 16px;
+    }
+
+    &--item {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
+
+    &--link {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--Brand, vars.$brand-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    &--name {
+      color: var(--Text, vars.$brand-text);
+      font-family: Onest;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    @include breakpoints.mobile {
+      &__container {
         display: flex;
-        flex-direction: column;
-        color: vars.$black;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin-top: 10px;
+      }
 
-        &--title {
-            color: var(--Text, vars.$brand-text);
-            font-family: Onest;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 18px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin: 0 auto;
-            margin-bottom: 16px;
+      &__item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.05); // Hover effect
         }
+      }
 
-        &--item {
-            margin-bottom: 20px;
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-        }
+      &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-        &--link {
+      &__icon {
+        width: 34px;
+        border-radius: 50%;
+        background-color: #00d09c;
+        padding: 4px;
+        &.icon {
+          &--instagram {
+            width: 23px;
+            padding: 6px;
+          }
+          &--facebook {
+            width: 33px;
+            padding: 0px;
+          }
+          &--linkedin {
             width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: var(--Brand, vars.$brand-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
+            padding: 5px;
+          }
+          &--x\/twitter {
+            width: 20px;
+            padding: 6px;
+          }
         }
+      }
 
-        &--name {
-            color: var(--Text, vars.$brand-text);
-            font-family: Onest;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-        }
-    }
-
-    &__copyright {
-        color: var(--gray-600, #52525B);
-        text-align: center;
-        font-family: Onest;
+      &__name {
         font-size: 14px;
-        font-style: normal;
         font-weight: 500;
-        line-height: normal;
+        color: #002b2b;
+      }
+
+      &__title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #002b2b;
+        margin-bottom: 10px;
+      }
     }
+  }
+
+  &__copyright {
+    color: var(--gray-600, #52525b);
+    text-align: center;
+    font-family: Onest;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
 }
