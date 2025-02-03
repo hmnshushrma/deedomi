@@ -20,3 +20,24 @@ h1 {
     flex-direction: column;
   }
 }
+
+.temporary-landing-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #00D096;
+  text-align: center;
+  flex-direction: column;
+  color: '#FFFFFF';
+
+  .text {
+    text-align: center;
+    font-family: Outfit;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 175%;
+    text-transform: uppercase;
+  }
+}
