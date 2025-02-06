@@ -34,6 +34,7 @@
   @include breakpoints.mobile {
     width: 80%;
     display: inline-grid;
+    margin-bottom: 100px;
     .cta-button {
       a {
         display: block;
