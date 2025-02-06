@@ -20,12 +20,17 @@
       width: 72%;
       @include breakpoints.mobile {
         width: 93vw;
+        margin-top: 125px;
       }
     }
     @include breakpoints.mobile {
       height: auto;
     }
   }
+  // &--text--container{
+
+  // }
+
   &__title {
     color: vars.$white;
     text-align: center;
