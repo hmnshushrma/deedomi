@@ -48,6 +48,10 @@
       border-radius: 6px;
       background: var(--Brand, vars.$brand-primary);
       align-self: flex-start;
+      @include breakpoints.mobile {
+        width: 100%;
+        color: #fff;
+      }
     }
   }
 

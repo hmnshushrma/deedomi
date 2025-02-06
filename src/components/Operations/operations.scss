@@ -30,6 +30,10 @@
       letter-spacing: 0.75px;
       text-transform: uppercase;
       margin: 0;
+      @include breakpoints.mobile {
+        font-size: 13px;
+        font-weight: 500;
+      }
     }
 
     &--subtitle {

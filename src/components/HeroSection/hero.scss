@@ -4,7 +4,7 @@
 .hero {
   &__container {
     position: relative;
-    height: 100vh;
+
     background: linear-gradient(
         0deg,
         rgba(0, 0, 0, 0.4) 0%,
@@ -21,6 +21,9 @@
       @include breakpoints.mobile {
         width: 93vw;
       }
+    }
+    @include breakpoints.mobile {
+      height: auto;
     }
   }
   &__title {
@@ -68,12 +71,12 @@
     width: fit-content;
     margin: 0 auto 28px auto;
     @include breakpoints.mobile {
-      margin-top: 3vh;
+      margin-top: 180px;
     }
     p {
       margin: 0px;
       @include breakpoints.mobile {
-        font-size: 14px;
+        font-size: 12px;
       }
     }
     &--images-icon {
