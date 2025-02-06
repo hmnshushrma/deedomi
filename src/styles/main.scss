@@ -45,9 +45,8 @@ h1 {
     font-weight: 700;
     line-height: 175%;
     text-transform: uppercase;
-    color: vars.$brand-text;
+
     @include breakpoints.mobile {
-      color: vars.$brand-text;
       font-size: 28px;
     }
   }
