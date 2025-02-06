@@ -2,6 +2,7 @@
 // Importing external fonts
 
 @use "./_variables" as vars;
+@use "./_breakpoints.scss" as breakpoints;
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Outfit:wght@100..900&display=swap");
 
 body {
@@ -26,10 +27,15 @@ h1 {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #00D096;
+  background-color: #00d096;
   text-align: center;
   flex-direction: column;
-  color: '#FFFFFF';
+  color: "#FFFFFF";
+  @include breakpoints.mobile {
+    .logo-img {
+      height: 35px;
+    }
+  }
 
   .text {
     text-align: center;
@@ -39,5 +45,9 @@ h1 {
     font-weight: 700;
     line-height: 175%;
     text-transform: uppercase;
+    @include breakpoints.mobile {
+      color: vars.$brand-text;
+      font-size: 28px;
+    }
   }
 }
