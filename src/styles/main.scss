@@ -30,7 +30,8 @@ h1 {
   background-color: #00d096;
   text-align: center;
   flex-direction: column;
-  color: "#FFFFFF";
+  color: #FFFFFF;
+
   @include breakpoints.mobile {
     .logo-img {
       height: 35px;
