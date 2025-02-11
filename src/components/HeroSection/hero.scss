@@ -27,9 +27,6 @@
       height: auto;
     }
   }
-  // &--text--container{
-
-  // }
 
   &__title {
     color: vars.$white;
@@ -85,8 +82,12 @@
     p {
       margin: 0px;
       @include breakpoints.mobile {
-        font-size: 12px;
+        font-size: 14px;
         color: #ffffff;
+      }
+
+      @include breakpoints.respond-to(xsm) {
+        font-size: 12px;
       }
     }
     &--images-icon {
