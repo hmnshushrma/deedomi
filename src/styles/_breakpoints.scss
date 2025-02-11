@@ -1,4 +1,5 @@
 // Breakpoint Variables
+$breakpoint-xsm: 400px; //Extra  Small devices (phones)
 $breakpoint-sm: 480px; // Small devices (phones)
 $breakpoint-md: 768px; // Medium devices (tablets)
 $breakpoint-lg: 1024px; // Large devices (desktops)
@@ -14,6 +15,10 @@ $breakpoint-lg: 1024px; // Large devices (desktops)
 @mixin respond-to($breakpoint) {
   @if $breakpoint == sm {
     @media (max-width: $breakpoint-sm) {
+      @content;
+    }
+  } @else if $breakpoint == xsm {
+    @media (max-width: $breakpoint-xsm) {
       @content;
     }
   } @else if $breakpoint == md {

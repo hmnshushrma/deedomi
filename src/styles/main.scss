@@ -46,7 +46,6 @@ h1 {
     font-weight: 700;
     line-height: 175%;
     text-transform: uppercase;
-
     @include breakpoints.mobile {
       font-size: 28px;
     }
